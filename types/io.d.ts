@@ -1,0 +1,30 @@
+export = transport;
+declare function transport(addrs: any, protocol: any, clientOpts: any, listeners: any): {
+    connect: () => any;
+    getConnection: (key: any) => any;
+    disconnect: () => any;
+    writeKeyCommand: (ctx: any, key: any, decoder: any) => any;
+    writeCommand: (ctx: any, decoder: any, preWrite: any) => any;
+    writeCommandPinned: (ctx: any, decoder: any, conn: any) => any;
+    writeRetry: (ctx: any, decoder: any, fulfill: any, reject: any, triedAddrs: any) => void;
+    getProtocol: () => any;
+    findRpc: (id: any) => any;
+    removeRpc: (id: any) => any;
+    updateTopology: (bytebuf: any) => any;
+    getTopologyId: () => any;
+    getMembers: () => any;
+    findOwners: (k: any) => any;
+    retryRpcs: (addr: any) => void;
+    sslOpts: () => any;
+    authOpts: () => any;
+    switchToCluster: (clusterName: any) => any;
+    switchToDefaultCluster: () => any;
+    toString: () => any;
+    getId: () => any;
+    context: (size: any) => {
+        buf: any;
+        offset: number;
+        id: number;
+        triedAddrs: any[];
+    };
+};
