@@ -17,7 +17,12 @@ export function client(args: {
      */
     port: number;
 }[], options: any): any;
-export function Client(addrs: any, clientOpts: any): {
+/**
+ * @param {object} addrs
+ * @param {object} [clientOpts]
+ * @returns
+ */
+export function Client(addrs: object, clientOpts?: object): {
     connect: () => any;
     /**
      * Disconnect client from backend server(s).
